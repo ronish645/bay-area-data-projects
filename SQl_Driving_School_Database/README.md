@@ -115,9 +115,9 @@ driving_school_analysis/
 
 ## Author
 
-**Ronish Shrestha**
+Ronish Shrestha
 📍 Fremont, California
 💻 [GitHub](https://github.com/ronish645) | 🔗 [LinkedIn](https://linkedin.com/in/ronishshrestha)
 📧 [ronishshrestha04@email.com](mailto:ronishshrestha04@email.com)
 
-⭐ *If you found this project helpful, please give the repo a star!*
+If you found this project helpful, please give the repo a star!*
