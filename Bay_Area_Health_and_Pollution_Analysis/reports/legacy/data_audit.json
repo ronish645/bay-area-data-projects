@@ -1,0 +1,33 @@
+{
+  "sha256": "b60352ee5854698e85ccfbce2bd11209b405d0eb57977e21c65252f358e4420c",
+  "raw_rows": 1581,
+  "raw_columns": 60,
+  "missing_target_rows": 1,
+  "negative_feature_values_replaced": {
+    "Traffic": 5
+  },
+  "missing_features_after_sentinel_cleaning": {
+    "PM2.5": 0,
+    "Ozone": 0,
+    "Diesel PM": 0,
+    "Traffic": 5,
+    "Education": 16,
+    "Linguistic Isolation": 41,
+    "Poverty": 9,
+    "Unemployment": 42,
+    "Housing Burden": 19
+  },
+  "county_counts_raw": {
+    "Alameda": 360,
+    "Contra Costa": 207,
+    "Marin": 55,
+    "Napa": 40,
+    "San Francisco": 195,
+    "San Mateo": 157,
+    "Santa Clara": 372,
+    "Solano": 96,
+    "Sonoma": 99
+  },
+  "date_used": false,
+  "model_rows": 1580
+}

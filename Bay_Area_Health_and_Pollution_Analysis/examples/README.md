@@ -1,0 +1,1 @@
+Nine actual feature rows from the official final-release Bay Area dataset, one per county. County and tract identifiers are metadata; only the eighteen allowlisted feature columns enter the model. These rows demonstrate batch inference plumbing and are not an independent evaluation dataset.

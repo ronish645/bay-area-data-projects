@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bayair"
+version = "3.1.0"
+description = "Verified Bay Area environmental health data, buffered nested ML and interval calibration"
+requires-python = ">=3.12,<3.14"
+dependencies = ["numpy==2.3.4", "pandas==2.3.3", "scikit-learn==1.7.2", "matplotlib==3.10.7", "joblib==1.5.2", "openpyxl==3.1.5"]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.2", "nbformat==5.10.4", "nbclient==0.10.2", "ipykernel==6.30.1"]
+
+[project.scripts]
+bayair = "bayair.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+bayair = ["*.html"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

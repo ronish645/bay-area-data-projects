@@ -1,20 +1,25 @@
 # Bay Area Data Projects
 
-Two data projects: one analytics and ML, one relational database design.
+Projects investigating Bay Area environmental health and relational database design.
 
-## 🌫️ [Bay Area Air Pollution & Health Impact Analysis](Bay_Area_Health_and_Pollution_Analysis/)
+## [BayAir: pollution, asthma, and the limits of prediction](Bay_Area_Health_and_Pollution_Analysis/)
 
-Does air pollution track with asthma and cardiovascular disease across Bay Area counties?
+**Where is pollution higher? Where are asthma emergency visits higher? Can a model trained on some Bay Area counties estimate the pattern in another?**
 
-- Cleaned CalEnviroScreen environmental and health data (median imputation, feature filtering, scaling)
-- County-level EDA, correlation analysis and a composite socioeconomic **vulnerability index**
-- **Geospatial** PM2.5 mapping with GeoPandas
-- **Random Forest** and **Gradient Boosting** regressors to predict asthma rates from pollution levels
+BayAir studies **1,581 census tracts across nine Bay Area counties** using the official CalEnviroScreen 4.0 final release. It combines county comparisons, correlation heatmaps and geographic analysis with a reproducible ML experiment that holds out entire counties, enforces 5 km centroid buffers and reserves separate counties for uncertainty calibration.
 
-`pandas` · `GeoPandas` · `seaborn` · `scikit-learn`
+![Bay Area pollution and asthma county comparisons](Bay_Area_Health_and_Pollution_Analysis/reports/figures/county_comparison.png)
 
-## 🚗 [Driving School Relational Database](SQl_Driving_School_Database/)
+The findings are instructive: Napa has the highest mean PM2.5, Solano has the highest mean asthma emergency-visit indicator, and different pollutants have different county leaders. Socioeconomic inputs outperform pollution-only inputs in the exploratory model comparison; the combined model does not beat a simple baseline on equal-county MAE.
 
-A MySQL database for a driving school, normalized to BCNF: ER modeling, schema design, and analytical queries over students, instructors, lessons, vehicles and payments.
+The project includes verified source data, model and data cards, held-out explanations, prediction-range diagnostics, a preserved extrapolation failure, **34 passing Python tests**, an executed notebook, a CLI and a VS Code workspace. Measurements are historical tract averages; the analysis does not establish causal or individual health effects.
+
+**[Read the project](Bay_Area_Health_and_Pollution_Analysis/)** · [Open the notebook](Bay_Area_Health_and_Pollution_Analysis/Cal_Bay_Area_PollutionAndHealth_analysis.ipynb) · [Inspect the results](Bay_Area_Health_and_Pollution_Analysis/reports/RESULTS.md)
+
+`Python` · `pandas` · `scikit-learn` · `Matplotlib` · `pytest` · `VS Code`
+
+## [Driving School Relational Database](SQl_Driving_School_Database/)
+
+A MySQL database for a driving school, normalized to BCNF. Covers ER modeling, schema design and analytical queries over students, instructors, lessons, vehicles and payments.
 
 `MySQL` · `ER modeling` · `normalization (BCNF)`

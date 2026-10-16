@@ -1,0 +1,25 @@
+name: BayAir validation
+on:
+  push:
+    paths: ['Bay_Area_Health_and_Pollution_Analysis/**', '.github/workflows/bayair.yml']
+  pull_request:
+    paths: ['Bay_Area_Health_and_Pollution_Analysis/**', '.github/workflows/bayair.yml']
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MPLCONFIGDIR: /tmp/bayair-mpl
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: Bay_Area_Health_and_Pollution_Analysis/requirements-lock.txt
+      - run: pip install -r Bay_Area_Health_and_Pollution_Analysis/requirements-lock.txt
+      - run: pip install --no-deps -e './Bay_Area_Health_and_Pollution_Analysis[dev]'
+      - run: python -m pytest Bay_Area_Health_and_Pollution_Analysis/tests -q
+      - run: node Bay_Area_Health_and_Pollution_Analysis/tests/report_interactions.cjs
+      - run: node Bay_Area_Health_and_Pollution_Analysis/tests/story_interactions.cjs

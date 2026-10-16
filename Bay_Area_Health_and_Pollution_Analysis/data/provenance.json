@@ -1,0 +1,22 @@
+{
+  "release": "CalEnviroScreen 4.0 final (2021)",
+  "source_url": "https://data.ca.gov/dataset/11eb2b90-f3c1-46b4-bdf2-ba1dab939dac/resource/9a90474a-3912-4955-9552-457ee41cea51/download/calenviroscreen40resultsdatadictionary_f_2021.xlsx",
+  "catalog_url": "https://publish.data.ca.gov/dataset/calenviroscreen-4-0/resource/9a90474a-3912-4955-9552-457ee41cea51",
+  "workbook_sha256": "03f88d03e2fce5a04191dc65f2793e1dd8bf312b8d67a41e99ccf209b62b2f68",
+  "processed_sha256": "6b47d2b2c392dd4eea865c99056b81b939ef0a11b79d944f89bfcd54e769360f",
+  "raw_rows": 8035,
+  "processed_rows": 1581,
+  "counties": 9,
+  "missing_target": 1,
+  "bay_area_rows": 1581,
+  "negative_predictors_to_missing": {},
+  "retrieved_utc": "2026-10-16T06:13:30.412116+00:00",
+  "rights": "California catalog lists no restrictions on public use; no new license assigned.",
+  "transformations": [
+    "Select 26 documented fields",
+    "Filter to the nine Bay Area counties before any modeling",
+    "Normalize tract identifiers and county whitespace",
+    "Convert negative predictor placeholders to missing",
+    "Preserve missing targets for descriptive audit; exclude them only in modeling"
+  ]
+}

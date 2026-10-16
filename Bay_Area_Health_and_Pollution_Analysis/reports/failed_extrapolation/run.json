@@ -1,0 +1,36 @@
+{
+  "version": "3.0.0",
+  "scope": "Nine Bay Area counties only",
+  "seed": 42,
+  "buffer_km": 5,
+  "outer_folds": 9,
+  "inner_folds": 3,
+  "nominal_coverage": 0.9,
+  "raw_bay_area_rows": 1581,
+  "labeled_rows": 1580,
+  "data_sha256": "6b47d2b2c392dd4eea865c99056b81b939ef0a11b79d944f89bfcd54e769360f",
+  "protocol_sha256": "0220e8b3f12f4b08aee08ff221a59b82f4de8a2f3905d7afbca9a53d2b39f67c",
+  "code_sha256": {
+    "__init__.py": "2367662ba86a1b3816c61a34ae9207342317158d8b9dd1ef3a8464d25220a469",
+    "advanced.py": "569620275595e7f075f87e76ab4036d0e5de624bb7a7a575d58426b2af9b6f8e",
+    "benchmark.py": "ce215c6e5814a7718d7b70bd041014b3d8cf7aa52e66d01ec02234758bedcafc",
+    "cli.py": "7d4f921c9d7aad9044c5080611c4a0677a8fbb25d60cd6221ef9a42b2fdca62b",
+    "data.py": "97b6425286315f6adebf168307bb319e7d176ed0c9b971af1450c4efc4092257",
+    "experiment.py": "64bc84f214d3375e0014dd9dacba68c8d054c4cc61c7544a04d128b3aa59a386",
+    "modeling.py": "c0ea2512fc6e4e083193e0df50826f8402b74a8fdf602c25aeefbb4f023a9276",
+    "official.py": "990e03a43b37b2d24c0871f49879f6b04514fb51fe3436b14d2788283a0ba82c",
+    "reporting.py": "f0070dadcadd77ec1c9db34b793a6cfcff717aeec2be388e13242004827948d9",
+    "spatial.py": "eb12f50cda210742b03083960a69845532187435294ef032edc7ae8758687421"
+  },
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.3.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "scipy": "1.18.1",
+    "matplotlib": "3.10.7",
+    "joblib": "1.5.2",
+    "openpyxl": "3.1.5"
+  },
+  "elapsed_seconds": 79.17
+}

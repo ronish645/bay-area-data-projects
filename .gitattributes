@@ -1,0 +1,2 @@
+# Preserve whitespace from the publisher's exported data dictionary.
+Bay_Area_Health_and_Pollution_Analysis/data/official_dictionary.csv -whitespace

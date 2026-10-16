@@ -1,0 +1,16 @@
+{
+  "seed": 42,
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.3.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "matplotlib": "3.10.7",
+    "joblib": "1.5.2"
+  },
+  "elapsed_seconds": 78.41,
+  "primary_metric": "Unweighted mean of nine held-out county MAEs",
+  "outer_folds": 9,
+  "inner_folds": 3,
+  "data_sha256": "b60352ee5854698e85ccfbce2bd11209b405d0eb57977e21c65252f358e4420c"
+}

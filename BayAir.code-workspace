@@ -1,0 +1,111 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "BayAir \u00b7 ML research"
+    }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestArgs": [
+      "Bay_Area_Health_and_Pollution_Analysis/tests"
+    ],
+    "python.envFile": "${workspaceFolder}/.env",
+    "python.terminal.useEnvFile": true,
+    "python.analysis.extraPaths": [
+      "./Bay_Area_Health_and_Pollution_Analysis/src"
+    ],
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/*.egg-info": true
+    },
+    "editor.rulers": [
+      100
+    ]
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "ms-python.debugpy",
+      "ms-toolsai.jupyter"
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "BayAir: train + evaluate",
+        "type": "debugpy",
+        "request": "launch",
+        "args": [
+          "train"
+        ],
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "PYTHONPATH": "${workspaceFolder}/Bay_Area_Health_and_Pollution_Analysis/src",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "MPLCONFIGDIR": "${workspaceFolder}/.venv/mpl"
+        },
+        "console": "integratedTerminal",
+        "justMyCode": true,
+        "program": "${workspaceFolder}/run_bayair.py"
+      },
+      {
+        "name": "BayAir: refresh report",
+        "type": "debugpy",
+        "request": "launch",
+        "args": [
+          "report"
+        ],
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "PYTHONPATH": "${workspaceFolder}/Bay_Area_Health_and_Pollution_Analysis/src",
+          "MPLCONFIGDIR": "${workspaceFolder}/.venv/mpl"
+        },
+        "console": "integratedTerminal",
+        "program": "${workspaceFolder}/run_bayair.py"
+      },
+      {
+        "name": "BayAir: verify official source",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${workspaceFolder}/run_bayair.py",
+        "args": [
+          "fetch-official"
+        ],
+        "cwd": "${workspaceFolder}",
+        "console": "integratedTerminal"
+      }
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "BayAir: tests",
+        "type": "process",
+        "command": "${workspaceFolder}/.venv/bin/python",
+        "args": [
+          "-m",
+          "pytest",
+          "Bay_Area_Health_and_Pollution_Analysis/tests",
+          "-q"
+        ],
+        "options": {
+          "env": {
+            "PYTHONPATH": "${workspaceFolder}/Bay_Area_Health_and_Pollution_Analysis/src",
+            "OMP_NUM_THREADS": "1"
+          }
+        },
+        "group": {
+          "kind": "test",
+          "isDefault": true
+        },
+        "problemMatcher": []
+      }
+    ]
+  }
+}

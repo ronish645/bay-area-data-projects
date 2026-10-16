@@ -1,0 +1,10 @@
+{
+  "macro_mae_improvement": 0.1193749302737369,
+  "descriptive_95_percent_range": [
+    -7.500121907514247,
+    7.736753525878649
+  ],
+  "counties": 9,
+  "repeats": 2000,
+  "interpretation": "County-resampled stability range, not a formal confidence interval; outer training sets overlap."
+}
