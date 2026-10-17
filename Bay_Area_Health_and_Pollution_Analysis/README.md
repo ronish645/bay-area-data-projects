@@ -6,7 +6,7 @@ Air pollution varies across the Bay Area. So do asthma-related emergency visits.
 
 The study covers **1,581 census tracts across nine Bay Area counties**, using the official CalEnviroScreen 4.0 final release. It combines environmental analysis with a reproducible ML experiment designed to expose geographic generalization failures.
 
-[Research notebook](Cal_Bay_Area_PollutionAndHealth_analysis.ipynb) · [Full results](reports/RESULTS.md) · [Modeling code](src/bayair/benchmark.py) · [Evaluation protocol](docs/EVALUATION_PROTOCOL.md)
+[Live report](https://ronish645.github.io/bay-area-data-projects/) · [Research notebook](Cal_Bay_Area_PollutionAndHealth_analysis.ipynb) · [Full results](reports/RESULTS.md) · [Modeling code](src/bayair/benchmark.py) · [Evaluation protocol](docs/EVALUATION_PROTOCOL.md)
 
 ![Pollution and asthma indicators across the nine Bay Area counties](reports/figures/county_comparison.png)
 
@@ -174,6 +174,10 @@ Bay_Area_Health_and_Pollution_Analysis/
 Local verification: **34 Python tests pass**, all **11 notebook code cells execute without errors**, and batch inference works. Offline JavaScript checks cover the report's data binding and controls. CI configuration is included. The original CSV and prior study outputs remain available for comparison.
 
 The existing HTML explorer remains in `reports/index.html`; the notebook, figures and saved evidence are the main entry points for reviewing the research.
+
+### GitHub Pages
+
+The [live report](https://ronish645.github.io/bay-area-data-projects/) is hosted on GitHub Pages. `.github/workflows/pages.yml` checks the report's local links and interactions, packages only `reports/`, and deploys it when report changes reach `main`. The workflow can also be run manually. The published site serves the saved research results; model training and batch inference run through the Python project.
 
 ## What this study can support
 

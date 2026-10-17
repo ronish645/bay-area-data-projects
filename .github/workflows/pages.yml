@@ -1,0 +1,52 @@
+name: Deploy BayAir to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Bay_Area_Health_and_Pollution_Analysis/reports/**'
+      - 'Bay_Area_Health_and_Pollution_Analysis/tests/*interactions.cjs'
+      - 'scripts/check_static_report.py'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check report links and assets
+        run: python scripts/check_static_report.py
+      - name: Check report interactions
+        run: |
+          node Bay_Area_Health_and_Pollution_Analysis/tests/story_interactions.cjs
+          node Bay_Area_Health_and_Pollution_Analysis/tests/report_interactions.cjs
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Package static report
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: Bay_Area_Health_and_Pollution_Analysis/reports
+  deploy:
+    needs: package
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish report
+        id: deployment
+        uses: actions/deploy-pages@v4

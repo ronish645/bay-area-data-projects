@@ -14,7 +14,7 @@ The findings are instructive: Napa has the highest mean PM2.5, Solano has the hi
 
 The project includes verified source data, model and data cards, held-out explanations, prediction-range diagnostics, a preserved extrapolation failure, **34 passing Python tests**, an executed notebook, a CLI and a VS Code workspace. Measurements are historical tract averages; the analysis does not establish causal or individual health effects.
 
-**[Read the project](Bay_Area_Health_and_Pollution_Analysis/)** · [Open the notebook](Bay_Area_Health_and_Pollution_Analysis/Cal_Bay_Area_PollutionAndHealth_analysis.ipynb) · [Inspect the results](Bay_Area_Health_and_Pollution_Analysis/reports/RESULTS.md)
+**[Live report](https://ronish645.github.io/bay-area-data-projects/)** · [Read the project](Bay_Area_Health_and_Pollution_Analysis/) · [Open the notebook](Bay_Area_Health_and_Pollution_Analysis/Cal_Bay_Area_PollutionAndHealth_analysis.ipynb) · [Inspect the results](Bay_Area_Health_and_Pollution_Analysis/reports/RESULTS.md)
 
 `Python` · `pandas` · `scikit-learn` · `Matplotlib` · `pytest` · `VS Code`
 
