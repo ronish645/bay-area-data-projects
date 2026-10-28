@@ -7,3 +7,4 @@ __pycache__/
 **/artifacts/
 .DS_Store
 **/data/raw/
+.env
